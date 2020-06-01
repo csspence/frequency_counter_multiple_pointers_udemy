@@ -17,6 +17,15 @@ Time - O(n)
 Space - O(n)
 */
 
-const areThereDuplicates = () => {
-  
+const areThereDuplicates = function() {
+  const theArgs = {};
+  for(let i = 0; i < arguments.length; i++) {
+    if(theArgs[arguments[i]] !== undefined) {
+      return true;
+    } else {
+      theArgs[arguments[i]] = 1;
+    }
+  }
+
+  return false;
 }
